@@ -7,7 +7,7 @@ export default function AboutSection() {
       <div
         className="pointer-events-none absolute inset-0 z-0 opacity-10 bg-no-repeat bg-top bg-contain"
         style={{
-          backgroundImage: "url('/images/overlay-pattern.png')",
+          backgroundImage: "url('/images/')",
         }}
       />
 
@@ -83,8 +83,9 @@ export default function AboutSection() {
                 {/* Image */}
                 <div className="relative rounded-[200px] bg-[#002E5B] overflow-hidden">
                   <img
-                    src="/images/web-application-engineer-and-seo-expert.webp"
-                    alt="Anwar Hossain"
+                    src="/images/about-web-application-engineer-and-seo-expert.webp"
+                    alt="Web Application Engineer & SEO Expert"
+                    title="Anwar Hossain - Web Application Engineer & SEO Expert"
                     className="block h-auto w-full object-cover"
                   />
                 </div>

@@ -140,7 +140,7 @@ export default function Hero() {
               {/* Profile image */}
               <div className="relative">
                 <img
-                  src="https://anwarhosain.com/wp-content/uploads/2025/02/Best-SEO-Expert-in-Bangladesh-1.webp"
+                  src="./images/Web-Application-Engineer-and-SEO-Expert.webp"
                   alt="Anwar Hossain"
                   title="Anwar Hossain-Web Application Engineer & SEO Expert"
                   className="block h-auto w-full max-w-[360px] sm:max-w-[410px] lg:max-w-[500px]"

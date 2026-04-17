@@ -35,7 +35,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <Image
-            src="/images/Web-Application-Engineer-and-SEO-Expert.png"
+            src="/images/Web-Application-Engineer-and-SEO-Expert-Logo.png"
             alt="Logo"
             width={200}
             height={80}
@@ -118,16 +118,16 @@ export default function Header() {
             )
           )}
 
-          <Link
-            href="tel:+8801786373379"
-            className="ml-2 inline-flex items-center justify-center whitespace-nowrap rounded-md 
-            bg-[#FFDF20] px-4 py-2 text-[16px] font-extrabold not-italic text-[#002E5B]
-            transition-all duration-200 md:hover:scale-105 
-            hover:bg-[#002E5B] hover:text-white 
-            lg:px-6 lg:py-3 lg:text-[22px] hover:border-1 hover: border-yellow-300 hover:rounded-md "
-          >
-            +880 1786373379
-          </Link>
+      <Link
+        href="tel:+8801786373379"
+        className="ml-2 inline-flex items-center justify-center whitespace-nowrap rounded-md 
+        border border-transparent bg-[#FFDF20] px-4 py-2 text-[16px] font-extrabold not-italic text-[#002E5B]
+        transition-all duration-200 md:hover:scale-105
+        hover:bg-[#002E5B] hover:text-white hover:border-yellow-300
+        lg:px-6 lg:py-3 lg:text-[22px]"
+      >
+        +880 1786373379
+      </Link>
         </nav>
       </div>
 
