@@ -6,11 +6,13 @@ body {
   padding: 0;
 }
 
-/* ===== Live Animated Underline ===== */
+/* ===== Live Animated Underline (Auto Width) ===== */
 
 .live-line {
   position: relative;
-  width: 100%;
+  display: inline-block; /* 🔥 key for auto width */
+  width: 100%; /* will follow parent */
+  max-width: 160px; /* optional limit */
   height: 6px;
   background: #636462;
   border-radius: 999px;
@@ -21,21 +23,14 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 25%;
+  width: 30%;
   height: 100%;
   background: #FFDF20;
   border-radius: 999px;
-
-  /* 🔥 KEY PART */
   animation: slideLR 2.5s ease-in-out infinite alternate;
 }
 
-/* 🔁 Left ↔ Right */
 @keyframes slideLR {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: 75%;
-  }
+  0% { left: 0%; }
+  100% { left: 70%; }
 }
