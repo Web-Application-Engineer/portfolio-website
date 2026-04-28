@@ -1,4 +1,5 @@
 "use client";
+import SectionHeading from "./SectionHeading";
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -324,21 +325,12 @@ export default function ServiceSection({
       className={`w-full border-2 border-amber-500 bg-[#002E5B] py-16 ${className}`}
     >
       <div className="mx-auto w-full max-w-[1450px] border border-gray-600 px-2 sm:px-6 lg:px-2">
-        <div className="mb-10 text-center">
-          <h2 className="animated-underline mb-[-2px] text-[40px] font-bold text-[#E1641E]">
-            {sectionTitle}
-          </h2>
+        
+        <SectionHeading title={sectionTitle} />
 
-          <div className="mx-auto w-[150px]">
-            <div className="live-line">
-              <span className="live-line-bar"></span>
-            </div>
-          </div>
-
-          <p className="mx-auto mt-5 max-w-[1450px] text-[28px] font-bold leading-snug text-white sm:text-[36px] lg:text-[37px]">
-            {sectionSubtitle}
-          </p>
-        </div>
+        <p className="mx-auto mt-5 max-w-[1450px] text-center text-[20px] font-semibold text-white sm:text-[24px] lg:text-[28px]">
+          {sectionSubtitle}
+        </p>
 
         <div
           ref={viewportRef}

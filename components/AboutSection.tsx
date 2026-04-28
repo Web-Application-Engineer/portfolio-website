@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -82,12 +83,16 @@ export default function AboutSection() {
 
                 {/* Image */}
                 <div className="relative rounded-[200px] bg-[#002E5B] overflow-hidden">
-                  <img
-                    src="/images/about-web-application-engineer-and-seo-expert.webp"
-                    alt="Web Application Engineer & SEO Expert"
-                    title="Anwar Hossain - Web Application Engineer & SEO Expert"
-                    className="block h-auto w-full object-cover"
-                  />
+                <Image
+                  src="/Images/about-web-application-engineer-and-seo-expert.webp"
+                  alt="About Web Application Engineer & SEO Expert"
+                  title="Anwar Hossain - Web Application Engineer & SEO Expert"
+                  width={460}
+                  height={460}
+                  priority
+                  sizes="(max-width: 640px) 320px, (max-width: 768px) 380px, (max-width: 1024px) 420px, 460px"
+                  className="block h-auto w-full object-cover"
+                />
                 </div>
 
               </div>

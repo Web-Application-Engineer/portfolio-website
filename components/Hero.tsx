@@ -72,7 +72,7 @@ export default function Hero() {
             <div className="relative overflow-hidden rounded-[5px] p-[3px]">
               
               {/* Spinning gradient border */}
-              <div className="hero-spin absolute inset-[-120%] bg-[conic-gradient(from_0deg,#E17100,transparent_20%,transparent_60%,#E17100_75%,transparent)]" />
+              <div className="hero-spin absolute inset-[-120%] bg-[conic-gradient(from_0deg,#FFDF20,transparent_20%,transparent_60%,#FFDF20_75%,transparent)]" />
 
               {/* Inner card content */}
               <div className="relative rounded-[5px] border border-gray-600 bg-[#071F37] px-[22px] py-10 sm:px-7 sm:py-[46px] lg:px-9 lg:py-[38px] lg:pb-12">
@@ -80,14 +80,15 @@ export default function Hero() {
                 {/* Intro heading */}
                 <h2 className="m-0 text-2xl text-gray-100 sm:text-[30px]">
                   Hi, I am{" "}
-                  <span className="font-bold text-amber-600">
+                  <span className="font-bold text-yellow-300">
                     Anwar Hossain
                   </span>
                 </h2>
 
                 {/* Animated typing text */}
-                <h1 className="mt-1 min-h-[36px] text-2xl font-bold leading-[1.375] text-gray-100 sm:text-[30px] lg:mt-3">
-                  <span className="font-bold text-amber-600">{text}</span>
+                <h1 className="mt-1 min-h-[36px] text-[18px] font-bold leading-[2.50] text-gray-100 sm:leading-[1.6] md:leading-[1.4] lg:leading-[1.35] sm:mt-4 sm:text-[20px] md:mt-4 md:text-[28px] lg:mt-3 lg:text-[26px] xl:text-[33px]">
+                  <span className="font-bold text-yellow-300">{text}</span>
+
                   {/* Blinking cursor */}
                   <span className="hero-pulse font-bold text-gray-100">|</span>
                 </h1>
@@ -175,7 +176,7 @@ export default function Hero() {
                       {/* Circular text */}
                       <text
                         fill="#dedede"
-                        className="text-[19px] font-bold [letter-spacing:2px]"
+                        className="text-[17.5px] font-bold [letter-spacing:1.5px]"
                       >
                         <textPath href="#circlePathHero" startOffset="0%">
                           • WEB APPLICATION ENGINEER & SEO EXPERT

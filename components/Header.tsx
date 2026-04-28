@@ -209,7 +209,7 @@ export default function Header() {
                             <Link
                               key={service.name}
                               href={service.href}
-                              className="block rounded-lg p-3 transition hover:bg-[#002E5B] hover:text-white"
+                              className="block rounded-lg p-3 transition hover: hover:bg-blue-700 hover:px-4 hover:py-2 hover:rounded-md hover:text-white"
                             >
                               <span className="block text-[17px] font-extrabold">
                                 {service.name}
@@ -266,15 +266,19 @@ export default function Header() {
       </div>
 
       {/* Mobile menu */}
-      {open && (
-        <div className="border-t border-white/10 bg-[#022a4c] lg:hidden">
-          <nav className="mx-auto flex max-w-[1400px] flex-col gap-4 px-4 py-5 sm:px-6">
-            {menuItems.map((item, index) =>
-              item.name === "Services" ? (
-                <div key={item.name} className="flex flex-col gap-2">
-                  <button
-                    type="button"
-                    className="flex items-center justify-between text-[18px] font-bold text-white"
+            {open && (
+              <div className="border-t border-white/10 bg-[#022a4c] lg:hidden">
+                <nav className="mx-auto flex max-w-[1400px] flex-col gap-4 px-4 py-5 sm:px-6">
+                  {menuItems.map((item, index) =>
+                    item.name === "Services" ? (
+                      <div key={item.name} className="flex flex-col gap-2">
+                        <button
+                          type="button"
+                          className={`flex items-center justify-between rounded-md px-4 py-3 text-[18px] font-bold transition-all duration-200 bg-[#1E63A9] ${
+                        servicesOpen
+                          ? "bg-[#1E63A9] text-white" // ✅ blue active (your screenshot)
+                          : "text-white"
+                      }`}
                     onClick={() => setServicesOpen(!servicesOpen)}
                   >
                     <span>{item.name}</span>

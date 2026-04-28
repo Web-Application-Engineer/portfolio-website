@@ -3,6 +3,9 @@ import Hero from "../components/Hero";
 import AboutSection from "../components/AboutSection";
 import CertificationSection from "../components/CertificationSection";
 import ServiceSection from "../components/ServiceSection";
+import ProjectSection from "../components/ProjectSection";
+import SEOProjectsSection from "../components/SEOProjectsSection";
+import SeoConsultancySection from "@/components/SEOConsutancySection";
 
 
 export default function Home() {
@@ -21,6 +24,16 @@ export default function Home() {
 
       {/* Services Section */}
       <ServiceSection />
+
+      {/* Projects Section */}
+      <ProjectSection />
+
+      {/* SEO Projects Section */}
+      <SEOProjectsSection />
+
+      {/* SEO Consultancy Section */}
+      <SeoConsultancySection />
+
 
     </main>
 

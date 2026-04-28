@@ -13,75 +13,67 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t-[5px] bg-[#002E5B] text-white/80 ">
+    <footer className="w-full border-t-[5px] bg-[#002E5B] text-white/80">
       <div className="mx-auto w-full max-w-[90%] px-2 py-12 sm:px-8 lg:px-10">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] p-3">
+        <div className="grid grid-cols-1 gap-10 p-3 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           {/* Brand */}
-          <div className="text-center md:text-left max-w-[850px]">
+          <div className="max-w-[850px] text-left">
             <h2 className="text-[28px] font-extrabold sm:text-[30px]">
               Anwar Hossain
             </h2>
 
-            <p className="mx-auto mt-6 max-w-[450px] text-[15px] font-semibold leading-7 text-white/80 md:mx-0 text-justify">
-              Web Application Engineer & SEO Expert specializing in building high-performance web applications and implementing strategic 
-              SEO to boost search rankings, drive targeted traffic, and help businesses grow faster and achieve measurable results.
+            <p className="mt-6 max-w-[450px] text-justify text-[15px] font-semibold leading-7 text-white/80">
+              Web Application Engineer & SEO Expert specializing in building
+              high-performance web applications and implementing strategic SEO
+              to boost search rankings, drive targeted traffic, and help
+              businesses grow faster and achieve measurable results.
             </p>
 
-
-<div className="mt-7 flex flex-wrap justify-between gap-4 border border-yellow-300/20 p-3 rounded-3xl">
-                <a
+            {/* Social Icons */}
+            <div className="mt-7 flex flex-wrap justify-between gap-4 rounded-3xl border border-yellow-300/20 p-3">
+              <a
                 href="https://facebook.com/YOUR_PAGE_NAME"
                 target="_blank"
                 rel="noopener noreferrer"
-                >
+              >
                 <SocialIcon bg="#4969A8">
-                    <FaFacebookF />
+                  <FaFacebookF />
                 </SocialIcon>
-                </a>
+              </a>
 
-                <a
+              <a
                 href="https://www.linkedin.com/in/YOUR_USERNAME"
                 target="_blank"
                 rel="noopener noreferrer"
-                >
+              >
                 <SocialIcon bg="#0077B5">
-                    <FaLinkedinIn />
+                  <FaLinkedinIn />
                 </SocialIcon>
-                </a>
-
-              <a href="#" 
-              target="_blank" 
-              rel="noopener noreferrer"> 
-              <SocialIcon bg="#000000">
-                <FaTwitter />
-              </SocialIcon>
               </a>
 
-              <a href="#" 
-              target="_blank" 
-              rel="noopener noreferrer">    
-
-              <SocialIcon bg="#D92323">
-                <FaYoutube />
-              </SocialIcon>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <SocialIcon bg="#000000">
+                  <FaTwitter />
+                </SocialIcon>
               </a>
 
-             <a href="#" 
-             target="_blank" 
-             rel="noopener noreferrer">  
-              <SocialIcon bg="#25D366">
-                <FaWhatsapp />
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <SocialIcon bg="#D92323">
+                  <FaYoutube />
                 </SocialIcon>
-                </a>
-                
-            <a href="#" 
-            target="_blank" 
-            rel="noopener noreferrer">  
+              </a>
+
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <SocialIcon bg="#25D366">
+                  <FaWhatsapp />
+                </SocialIcon>
+              </a>
+
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 <SocialIcon bg="#0084FF">
-                <FaFacebookMessenger/>
+                  <FaFacebookMessenger />
                 </SocialIcon>
-                </a>
-
+              </a>
             </div>
 
             <a
@@ -118,7 +110,7 @@ export default function Footer() {
           />
 
           {/* Explore */}
-          <div className="text-center md:text-left">
+          <div className="text-left">
             <FooterHeading title="Explore Me" />
 
             <FooterLinks
@@ -129,7 +121,7 @@ export default function Footer() {
               ]}
             />
 
-            <div className="mt-6 flex flex-col items-center gap-2 md:items-start">
+            <div className="mt-6 flex flex-col items-start gap-2">
               <Tag color="#c77008">SEO</Tag>
               <Tag color="#7f9b13">Digital Marketing</Tag>
               <Tag color="#7d26d9">Social Media Marketing</Tag>
@@ -139,7 +131,7 @@ export default function Footer() {
 
         {/* Bottom Copyright */}
         <div className="mt-12 border-t border-white/30 pt-6">
-          <div className="flex flex-col items-center justify-between gap-3 text-center text-[14px] text-white/80 md:flex-row">
+          <div className="flex flex-col items-start justify-between gap-3 text-left text-[14px] text-white/80 md:flex-row md:items-center md:text-center">
             <div>
               © {new Date().getFullYear()} Anwar Hossain. All rights reserved.
             </div>
@@ -192,7 +184,7 @@ export default function Footer() {
 
         @media (max-width: 767px) {
           .ah-footer-live-line {
-            margin-left: auto;
+            margin-left: 0;
             margin-right: auto;
           }
         }
@@ -210,7 +202,7 @@ function FooterColumn({
   links: [string, string][];
 }) {
   return (
-    <div className="text-center md:text-left">
+    <div className="text-left">
       <FooterHeading title={title} />
       <FooterLinks links={links} />
     </div>
@@ -238,14 +230,14 @@ function FooterLinks({ links }: { links: [string, string][] }) {
         <li key={label}>
           <Link
             href={href}
-            className="group flex items-center justify-center gap-2 text-[18px] font-semibold text-white/80 md:justify-start"
-            >
+            className="group flex items-center justify-start gap-2 text-[18px] font-semibold text-white/80"
+          >
             <span className="text-[#FFDF20]">⊕</span>
 
             <span className="transition duration-300 group-hover:translate-x-1 group-hover:text-[#FFDF20]">
-                {label}
+              {label}
             </span>
-            </Link>
+          </Link>
         </li>
       ))}
     </ul>
@@ -262,8 +254,7 @@ function SocialIcon({
 }) {
   return (
     <div
-      className="flex h-[44px] w-[44px] items-center justify-center rounded-full border-3 border-yellow-300 hover:border-3 hover:border-white text-[18px]
-       text-white transition hover:-translate-y-1 sm:h-[50px] sm:w-[50px] sm:text-[20px]"
+      className="flex h-[44px] w-[44px] items-center justify-center rounded-full border-3 border-yellow-300 text-[18px] text-white transition hover:-translate-y-1 hover:border-3 hover:border-white sm:h-[50px] sm:w-[50px] sm:text-[20px]"
       style={{ backgroundColor: bg }}
     >
       {children}
