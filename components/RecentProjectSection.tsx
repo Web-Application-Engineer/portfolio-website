@@ -37,8 +37,8 @@ const projects = [
 
 export default function ProjectSection() {
   return (
-    <section className="w-full bg-[#002E5B] px-3 py-12 border-2 border-amber-500 sm:px-4 sm:py-16">
-      <div className="mx-auto w-full max-w-[1450px] border border-gray-600 px-3 sm:px-4">
+    <section className="w-full bg-[#002E5B] px-3 sm:px-4 sm:py-10">
+      <div className="mx-auto w-full max-w-[1450px] px-3 sm:px-4">
         <SectionHeading title="Recent Projects" />
 
         <div className="mt-8 grid w-full grid-cols-1 gap-6 sm:mt-10 sm:gap-8 md:grid-cols-2 lg:mt-12 lg:gap-12">

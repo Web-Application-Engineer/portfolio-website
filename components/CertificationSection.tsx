@@ -2,7 +2,7 @@
 
 export default function CertificationSection() {
   return (
-    <section className="w-full bg-[#002E5B] border-2 border-amber-500 py-10">
+    <section className="w-full bg-[#002E5B] pt-10 border-t border-[#004a94]">
       <div className="mx-auto w-full max-w-full">
         {/* Top content */}
         <div className="px-4 pb-6 pt-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 ">

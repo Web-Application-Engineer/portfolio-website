@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="relative overflow-hidden bg-[#002E5B] pt-5 border-2 border-amber-500">
+    <section className="relative overflow-hidden bg-[#002E5B] pt-10 border-t border-[#004a94]">
       {/* Clean background overlay image */}
       <div
         className="pointer-events-none absolute inset-0 z-0 opacity-10 bg-no-repeat bg-top bg-contain"
@@ -12,7 +12,7 @@ export default function AboutSection() {
         }}
       />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[1450px] items-center px-4 py-12 sm:px-6 md:px-8 lg:min-h-[700px] lg:px-10 border-1 border-gray-600">
+      <div className="relative z-10 mx-auto flex w-full max-w-[1450px] items-center px-4 py-12 sm:px-6 md:px-8 lg:min-h-[700px] lg:px-10">
         <div className="grid w-full items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
           {/* Left content */}
           <div className="mx-auto w-full max-w-[650px]">

@@ -41,7 +41,6 @@ export default function Header() {
         },
       ],
     },
-
     {
       title: "SEO & Branding",
       items: [
@@ -64,10 +63,9 @@ export default function Header() {
           name: "Google Business Profile",
           href: "#",
           desc: "Build high-quality backlinks to boost authority and rankings.",
-        },     
+        },
       ],
     },
-    
     {
       title: "Apps & Software",
       items: [
@@ -76,7 +74,7 @@ export default function Header() {
           href: "/services/app-development",
           desc: "Mobile & Web Apps with smooth UX.",
         },
-                {
+        {
           name: "Software Development",
           href: "/services/software-development",
           desc: "Custom software for business automation.",
@@ -91,19 +89,16 @@ export default function Header() {
           href: "/services/ecommerce-website-development",
           desc: "Scalable cloud-based solutions for modern businesses.",
         },
-
       ],
     },
     {
       title: "Digital Marketing",
       items: [
-
-         {
+        {
           name: "Search Engine Marketing",
           href: "#",
           desc: "Paid ads to get instant traffic & leads.",
         },
-
         {
           name: "Social Media Marketing",
           href: "/services/social-media-marketing",
@@ -119,14 +114,13 @@ export default function Header() {
           href: "#",
           desc: "Build relationships and increase repeat sales.",
         },
-       
       ],
     },
   ];
 
   return (
-    <header className="w-full border-2 border-amber-500 bg-[#002E5B] text-white">
-      <div className="mx-auto flex min-h-[90px] max-w-[1450px] items-center justify-between border border-gray-600 px-4 py-6 sm:px-6 lg:min-h-[110px] lg:px-8">
+    <header className="w-full bg-[#002E5B] text-white">
+      <div className="mx-auto flex min-h-[90px] max-w-[1450px] items-center justify-between  px-4 py-6 sm:px-6 lg:min-h-[110px] lg:px-8">
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <Image
@@ -178,7 +172,7 @@ export default function Header() {
               <div key={item.name} className="group static">
                 <button
                   type="button"
-                  className="inline-flex items-center gap-2 text-[17px] font-bold transition-all duration-200 hover:scale-105 hover:text-yellow-300 lg:text-[24px]"
+                  className="inline-flex items-center gap-2 text-[17px] font-bold  hover:text-yellow-300 lg:text-[24px]"
                 >
                   {item.name}
 
@@ -193,12 +187,12 @@ export default function Header() {
                 </button>
 
                 {/* Premium Mega Menu */}
-                <div className="invisible absolute left-1/2 top-[90px] z-50 w-[calc(100%-32px)] max-w-[1250px] -translate-x-1/2 translate-y-4 rounded-2xl border border-yellow-300/30 bg-white p-6 text-[#002E5B] opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 lg:top-[105px]">
-                  <div className="grid grid-cols-4 gap-5">
+              <div className="invisible absolute left-1/2 top-[90px] z-50 w-[calc(100%-32px)] max-w-[1250px] -translate-x-1/2 translate-y-4 rounded-2xl border border-yellow-300/30 bg-white p-6 text-[#002E5B] opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 lg:top-[117px]">                  
+              <div className="grid grid-cols-4 gap-5">
                     {megaServices.map((group) => (
                       <div
                         key={group.title}
-                        className="rounded-xl border border-gray-200 bg-gray-50 p-4 transition hover:-translate-y-1 hover:border-yellow-400 hover:shadow-lg"
+                        className="rounded-xl border border-gray-200 bg-gray-50 p-4 transition-colors duration-200 hover:border-yellow-400 hover:shadow-lg"
                       >
                         <h3 className="mb-4 border-b border-gray-300 pb-2 text-[20px] font-extrabold text-[#E1641E]">
                           {group.title}
@@ -206,18 +200,20 @@ export default function Header() {
 
                         <div className="space-y-3">
                           {group.items.map((service) => (
-                            <Link
-                              key={service.name}
-                              href={service.href}
-                              className="block rounded-lg p-3 transition hover: hover:bg-blue-700 hover:px-4 hover:py-2 hover:rounded-md hover:text-white"
-                            >
-                              <span className="block text-[17px] font-extrabold">
-                                {service.name}
-                              </span>
-                              <span className="mt-1 block text-[13px] font-medium leading-5 opacity-80">
-                                {service.desc}
-                              </span>
-                            </Link>
+                    <Link
+                      key={service.name}
+                      href={service.href}
+                      className="group/item block rounded-lg p-3 transition-colors duration-200 hover:bg-blue-900 hover:text-white"
+                    >
+                      <div className="transition-transform duration-300 group-hover/item:translate-x-1">
+                        <span className="block text-[17px] font-extrabold">
+                          {service.name}
+                        </span>
+                        <span className="mt-1 block text-[13px] font-medium leading-5 opacity-80">
+                          {service.desc}
+                        </span>
+                      </div>
+                    </Link>
                           ))}
                         </div>
                       </div>
@@ -230,7 +226,8 @@ export default function Header() {
                         Need Custom Solution?
                       </h4>
                       <p className="mt-1 text-[15px] text-white/90">
-                        Get SEO, Website, Apps and Software Support from One Place.
+                        Get SEO, Website, Apps and Software Support from One
+                        Place.
                       </p>
                     </div>
 
@@ -266,64 +263,66 @@ export default function Header() {
       </div>
 
       {/* Mobile menu */}
-            {open && (
-              <div className="border-t border-white/10 bg-[#022a4c] lg:hidden">
-                <nav className="mx-auto flex max-w-[1400px] flex-col gap-4 px-4 py-5 sm:px-6">
-                  {menuItems.map((item, index) =>
-                    item.name === "Services" ? (
-                      <div key={item.name} className="flex flex-col gap-2">
-                        <button
-                          type="button"
-                          className={`flex items-center justify-between rounded-md px-4 py-3 text-[18px] font-bold transition-all duration-200 bg-[#1E63A9] ${
-                        servicesOpen
-                          ? "bg-[#1E63A9] text-white" // ✅ blue active (your screenshot)
-                          : "text-white"
+      {open && (
+        <div className="border-t border-white/10 bg-[#022a4c] lg:hidden">
+          <nav className="mx-auto flex max-w-[1400px] flex-col gap-4 px-4 py-5 sm:px-6">
+            {menuItems.map((item, index) => {
+              if (item.name === "Services") {
+                return (
+                  <div key={item.name} className="flex flex-col gap-2">
+                    <button
+                      type="button"
+                      className={`flex items-center justify-between rounded-md px-4 py-3 text-[18px] font-bold transition-all duration-200 bg-[#1E63A9] ${
+                        servicesOpen ? "bg-[#1E63A9] text-white" : "text-white"
                       }`}
-                    onClick={() => setServicesOpen(!servicesOpen)}
-                  >
-                    <span>{item.name}</span>
-
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className={`h-4 w-4 transition-transform duration-300 ${
-                        servicesOpen ? "rotate-180" : ""
-                      }`}
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
+                      onClick={() => setServicesOpen(!servicesOpen)}
                     >
-                      <path d="M5.23 7.21 10 11.168l4.77-3.958" />
-                    </svg>
-                  </button>
+                      <span>{item.name}</span>
 
-                  {servicesOpen && (
-                    <div className="mt-2 space-y-4 rounded-xl bg-white/5 p-4">
-                      {megaServices.map((group) => (
-                        <div key={group.title}>
-                          <h3 className="mb-2 text-[16px] font-extrabold text-yellow-300">
-                            {group.title}
-                          </h3>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className={`h-4 w-4 transition-transform duration-300 ${
+                          servicesOpen ? "rotate-180" : ""
+                        }`}
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path d="M5.23 7.21 10 11.168l4.77-3.958" />
+                      </svg>
+                    </button>
 
-                          <div className="flex flex-col gap-2">
-                            {group.items.map((service) => (
-                              <Link
-                                key={service.name}
-                                href={service.href}
-                                className="rounded-md px-3 py-2 text-[15px] font-semibold text-white/90 hover:bg-white/10 hover:text-yellow-300"
-                                onClick={() => {
-                                  setServicesOpen(false);
-                                  setOpen(false);
-                                }}
-                              >
-                                {service.name}
-                              </Link>
-                            ))}
+                    {servicesOpen && (
+                      <div className="mt-2 space-y-4 rounded-xl bg-white/5 p-4">
+                        {megaServices.map((group) => (
+                          <div key={group.title}>
+                            <h3 className="mb-2 text-[16px] font-extrabold text-yellow-300">
+                              {group.title}
+                            </h3>
+
+                            <div className="flex flex-col gap-2">
+                              {group.items.map((service) => (
+                                <Link
+                                  key={service.name}
+                                  href={service.href}
+                                  className="rounded-md px-3 py-2 text-[15px] font-semibold text-white/90 hover:bg-white/10 hover:text-yellow-300"
+                                  onClick={() => {
+                                    setServicesOpen(false);
+                                    setOpen(false);
+                                  }}
+                                >
+                                  {service.name}
+                                </Link>
+                              ))}
+                            </div>
                           </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -334,8 +333,8 @@ export default function Header() {
                 >
                   {item.name}
                 </Link>
-              )
-            )}
+              );
+            })}
 
             <Link
               href="tel:+8801786373379"

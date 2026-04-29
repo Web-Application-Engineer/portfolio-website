@@ -153,7 +153,7 @@ export default function Footer() {
         .ah-footer-live-line {
           position: relative;
           width: 130px;
-          height: 6px;
+          height: 2px;
           margin-top: 8px;
           margin-bottom: 24px;
           background: #636462;

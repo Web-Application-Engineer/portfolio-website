@@ -58,10 +58,10 @@ export default function Hero() {
     // Main hero section container
     <section
       id="home"
-      className="relative flex min-h-[760px] w-full items-center border-t border-[#004a94] bg-[#002E5B] border-2 border-amber-500"
+      className="relative flex min-h-[760px] w-full items-center pb-10 border-t border-[#004a94] bg-[#002E5B]"
     >
       {/* Wrapper container */}
-      <div className="mx-auto w-full max-w-[1450px] px-2 pt-6 sm:px-4 border-1 border-gray-600">
+      <div className="mx-auto w-full max-w-[1450px] px-2 pt-6 sm:px-4">
         {/* Flex layout for content and image */}
         <div className="flex flex-col items-center justify-between gap-8 lg:flex-row lg:gap-10">
           

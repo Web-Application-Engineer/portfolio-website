@@ -3,10 +3,11 @@ import Hero from "../components/Hero";
 import AboutSection from "../components/AboutSection";
 import CertificationSection from "../components/CertificationSection";
 import ServiceSection from "../components/ServiceSection";
-import ProjectSection from "../components/ProjectSection";
+import RecentProjectSection from "../components/RecentProjectSection";
 import SEOProjectsSection from "../components/SEOProjectsSection";
-import SeoConsultancySection from "@/components/SEOConsutancySection";
-
+import SeoConsultancySection from "../components/SEOConsutancySection";
+import ExploreMeSection from "../components/ExploreMeSection";
+import CustomerReviewSection from "../components/CustomerReviewSection";
 
 export default function Home() {
   return (
@@ -25,8 +26,8 @@ export default function Home() {
       {/* Services Section */}
       <ServiceSection />
 
-      {/* Projects Section */}
-      <ProjectSection />
+      {/* Recent Projects Section */}
+      <RecentProjectSection />
 
       {/* SEO Projects Section */}
       <SEOProjectsSection />
@@ -34,6 +35,11 @@ export default function Home() {
       {/* SEO Consultancy Section */}
       <SeoConsultancySection />
 
+      {/* Explore Me Section */}
+      <ExploreMeSection />
+
+      {/* Customer Review Section */}
+      <CustomerReviewSection />
 
     </main>
 

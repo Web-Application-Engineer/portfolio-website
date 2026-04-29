@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import SectionHeading from "@/components/SectionHeading";
 
 const reasons = [
   {
@@ -24,19 +25,16 @@ const reasons = [
   },
 ];
 
-export default function SeoConsultancySection() {
+export default function SEOConsultancySection() {
   const [active, setActive] = useState(1);
 
-  const activeReason = reasons.find((item) => item.id === active);
+  const activeReason = reasons.find((item) => item.id === active) || reasons[0];
 
   return (
-    <section className="w-full bg-[#002E5B] py-10 md:py-16 border-2 border-amber-500 ">
-      <div className="mx-auto max-w-[1450px] px-4 border border-gray-600">
-        {/* Heading */}
-        <div className="text-center ">
-          <h2 className="text-xl font-extrabold text-white/80 sm:text-2xl md:text-3xl ">
-            Why Should You Take My SEO Consultancy?
-          </h2>
+    <section className="w-full bg-[#002E5B] py-10 md:py-10">
+      <div className="mx-auto max-w-[1450px] px-4">
+        <div className="text-center">
+          <SectionHeading title="Why Take My SEO Consultancy?" />
 
           <p className="mx-auto mt-4 max-w-[1450px] text-left text-sm font-bold leading-7 text-white/60 sm:text-base md:mt-6 md:text-lg md:leading-8">
             SEO consultancy boosts online visibility and traffic through expert
@@ -47,11 +45,11 @@ export default function SeoConsultancySection() {
           </p>
         </div>
 
-        {/* Tabs */}
         <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap md:mt-12 md:gap-6">
           {reasons.map((item) => (
             <button
               key={item.id}
+              type="button"
               onClick={() => setActive(item.id)}
               className={`flex h-12 w-full items-center justify-center gap-2 rounded border px-5 text-base font-bold transition-all duration-300 sm:h-14 sm:w-auto sm:min-w-[175px] sm:px-8 sm:text-lg ${
                 active === item.id
@@ -71,14 +69,12 @@ export default function SeoConsultancySection() {
           ))}
         </div>
 
-        {/* Content */}
         <motion.div
           key={active}
           initial={{ opacity: 0, scale: 0.82 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.35, ease: "easeOut" }}
-          className="mt-8 grid items-center gap-8 rounded-md border border-white/30 bg-[#003C77] p-4 text-left sm:p-6 md:grid-cols-[1.5fr_1fr] md:gap-10 md:text-justify mb-4"
-        >
+          className="mb-4 mt-8 grid min-h-[285px] items-center gap-8 rounded-md border border-white/30 bg-[#003C77] p-4 text-left sm:min-h-[300px] sm:p-6 md:grid-cols-[1.5fr_1fr] md:gap-10 md:text-justify lg:min-h-[320px]"        >
           <div>
             <h3 className="text-lg font-extrabold text-white/80 sm:text-xl md:text-2xl">
               {activeReason.title}
@@ -99,12 +95,10 @@ export default function SeoConsultancySection() {
           </div>
 
           <div className="flex justify-center md:justify-end">
-            <img
-              key={active}
-              src={activeReason.image}
-              alt={activeReason.title}
-              className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-[330px]"
-            />
+           <img
+          src={activeReason.image}
+          alt={activeReason.title}
+          className="h-[210px] w-full max-w-full object-contain sm:h-[240px] sm:max-w-[280px] md:h-[260px] md:max-w-[330px]"        />
           </div>
         </motion.div>
       </div>
