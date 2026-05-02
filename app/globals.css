@@ -62,3 +62,45 @@ body {
 }
 
 /* Projects Section Global Styles End */
+
+/* LearnSEOSection Global Styles Start */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-zoomIn {
+  animation: zoomIn 0.35s ease-in-out;
+}
+/* LearnSEOSection Global Styles End */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 18s linear infinite;
+}
+/* LearnSEOSection Global Styles End */
+
+/* Gloabal Button Start */
+
+.btn-primary {
+  @apply inline-flex transform rounded border border-yellow-300 bg-[#29c847] px-6 py-3 text-sm font-bold text-white transition duration-300;
+}
+
+.btn-primary:hover {
+  @apply scale-105 bg-[#873B09] text-white;
+}
+
+/* Gloabal Button End */

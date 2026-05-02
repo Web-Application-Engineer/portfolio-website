@@ -310,9 +310,6 @@ export default function CaseStudyCarousel({
                     </h3>
 
                     <p className="mb-10 text-[14px] leading-6 text-white sm:text-[15px] lg:text-[16px]">
-                      <span className="mr-1 rounded-md border border-yellow-300/50 bg-black/40 px-2 py-1 font-semibold backdrop-blur-md">
-                        Result:
-                      </span>
                       {item.result}
                     </p>
 

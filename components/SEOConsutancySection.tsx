@@ -80,7 +80,7 @@ export default function SEOConsultancySection() {
               {activeReason.title}
             </h3>
 
-            <p className="mt-4 max-w-4xl text-sm font-semibold leading-7 text-white/80 md:mt-6">
+            <p className="mt-4 max-w-4xl text-justify text-sm font-semibold leading-7 text-white/80 md:mt-6">
               {activeReason.text}
             </p>
 
